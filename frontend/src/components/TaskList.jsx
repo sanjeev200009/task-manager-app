@@ -59,12 +59,13 @@ function TaskList({ refreshTrigger }) {
             <li
               key={task.id}
               style={{
-                border: '1px solid #ddd',
+                border: '1px solid #d8d8d8',
                 padding: '10px',
                 marginBottom: '10px',
                 borderRadius: '4px',
+                backgroundColor: task.completed ? '#f9f9f9' : '#ffffff',
                 textDecoration: task.completed ? 'line-through' : 'none',
-                opacity: task.completed ? 0.6 : 1,
+                opacity: task.completed ? 0.7 : 1,
               }}
             >
               <h3>{task.title}</h3>
@@ -76,8 +77,11 @@ function TaskList({ refreshTrigger }) {
                 style={{
                   padding: '6px 12px',
                   cursor: task.completed ? 'not-allowed' : 'pointer',
-                  backgroundColor: task.completed ? '#90EE90' : '#87CEEB',
-                  opacity: task.completed ? 0.7 : 1,
+                  backgroundColor: task.completed ? '#1b5e20' : '#1a3a3a',
+                  color: '#ffffff',
+                  border: 'none',
+                  borderRadius: '4px',
+                  opacity: task.completed ? 0.8 : 1,
                 }}
               >
                 {task.completed ? '✓ Completed' : 'Mark as Completed'}

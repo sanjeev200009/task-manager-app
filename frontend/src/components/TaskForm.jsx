@@ -44,7 +44,7 @@ function TaskForm({ onTaskAdded }) {
           placeholder="Task title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          style={{ width: '100%', padding: '8px', marginBottom: '10px' }}
+          style={{ width: '100%', padding: '8px', marginBottom: '10px', border: '1.5px solid #2c3e50', borderRadius: '4px' }}
           disabled={isLoading}
         />
       </div>
@@ -53,13 +53,13 @@ function TaskForm({ onTaskAdded }) {
           placeholder="Task description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          style={{ width: '100%', padding: '8px', minHeight: '80px', marginBottom: '10px' }}
+          style={{ width: '100%', padding: '8px', minHeight: '80px', marginBottom: '10px', border: '1.5px solid #2c3e50', borderRadius: '4px' }}
           disabled={isLoading}
         />
       </div>
       <button 
         type="submit" 
-        style={{ padding: '8px 16px', cursor: 'pointer' }} 
+        style={{ padding: '8px 16px', cursor: 'pointer', backgroundColor: '#2c3e50', color: 'white', border: 'none', borderRadius: '4px' }} 
         disabled={isLoading}
       >
         {isLoading ? 'Adding...' : 'Add Task'}
